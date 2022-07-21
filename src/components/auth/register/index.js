@@ -49,6 +49,10 @@ const Register = () => {
     }
   }
 
+  if (localStorage.getItem('token')) {
+    navigate("/dashboard")
+  }
+
   return (
     <div className="container--auth">
       <h2>Sign Up</h2>
