@@ -1,0 +1,75 @@
+tbody {
+  min-width: 80%;
+
+}
+
+body {
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.products {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+th {
+  border: 1px solid rgba(0, 0, 0, 0.731);
+  border-spacing: 0;
+}
+
+
+td {
+  border: 1px solid rgb(147, 147, 147);
+  padding: 0.8em;
+}
+
+.delete-category-btn {
+  position: fixed;
+  bottom: 6em;
+  left: 1em
+}
+
+.message {
+  color: red;
+}
+
+.products-table {
+  min-width: 100%;
+
+}
+
+.btn-add {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.category {
+  left: 1em;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.784);
+}
+
+.btn-component {
+  margin-left: 0em;
+  border-radius: 2em;
+  border: none;
+}
+
+@media(max-width:47em) {
+  table {
+    font-size: 0.68rem;
+    max-width: 100%;
+  }
+
+  button {
+    padding: 0.4em;
+  }
+}

@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--nav-dark-clr);
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0.5em 0em 0em 1em;
+}
+
+P {
+  font-weight: 600;
+  margin: 0em 0em 0em auto;
+}

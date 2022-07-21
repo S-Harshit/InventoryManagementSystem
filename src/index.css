@@ -1,5 +1,21 @@
+:root {
+  --light-bg-clr: white;
+  --light-txt-clr: black;
+  --dark-bg--clr: #000506;
+  --dark-txt-clr: white;
+  --dark-btn-clr: white;
+  --dark-btn-text: black;
+  --light-btn-clr: black;
+  --light-btn-text: white;
+
+}
+
 body {
   margin: 0;
+  background-color: var(--light-bg--clr);
+  color: var(--light-txt-clr);
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +26,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  width: 7rem;
+  margin: 1em;
+  padding: 1em;
+  color: var(--light-btn-text);
+  background-color: var(--light-btn-clr);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(0em, -0.1em);
+  transition-duration: 100ms;
 }
