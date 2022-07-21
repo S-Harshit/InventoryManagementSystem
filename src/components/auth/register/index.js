@@ -12,7 +12,7 @@ const Register = () => {
 
   function signUp(e) {
     e.preventDefault();
-    const response = fetch("http://localhost:8080/signup", {
+    const response = fetch("https://inventory-management-system-in.herokuapp.com/signup", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

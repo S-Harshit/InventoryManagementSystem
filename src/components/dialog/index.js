@@ -14,7 +14,7 @@ export const Dialog = (isOpen,) => {
   const [category, setCategories] = useState([]);
 
   useEffect(() => {
-    const result = fetch("http://localhost:8080/category/list").then(resp => resp.json().then(sup => setCategories(sup[0].category)))
+    const result = fetch("https://inventory-management-system-in.herokuapp.com/category/list").then(resp => resp.json().then(sup => setCategories(sup[0].category)))
 
   }, [category])
 
@@ -27,7 +27,7 @@ export const Dialog = (isOpen,) => {
 
   function addProduct(e) {
     e.preventDefault();
-    fetch(" http://localhost:8080/product/add", {
+    fetch("https://inventory-management-system-in.herokuapp.com/product/add", {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

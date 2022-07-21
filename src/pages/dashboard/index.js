@@ -12,7 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token) {
-      const product = fetch('http://localhost:8080/product/list').then(response => response.json().then(data => ({ data: data, status: response.status }))).then(res => setProducts(res.data))
+      const product = fetch('https://inventory-management-system-in.herokuapp.com/product/list').then(response => response.json().then(data => ({ data: data, status: response.status }))).then(res => setProducts(res.data))
     }
     else {
       navigate('/');
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
 
   function deleteItem() {
-    fetch("http://localhost:8080/product/delete", {
+    fetch("https://inventory-management-system-in.herokuapp.com/product/delete", {
       method: 'POST',
       headers: {
         'Content-type': "application/json"
@@ -51,7 +51,7 @@ const Dashboard = () => {
   }
 
   function editProductName() {
-    fetch("http://localhost:8080/product/update", {
+    fetch("https://inventory-management-system-in.herokuapp.com/product/update", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -61,14 +61,14 @@ const Dashboard = () => {
       console.log(res)
     }))
 
-    fetch('http://localhost:8080/product/list').then(response => response.json().then(data => ({ data: data, status: response.status }))).then(res => setProducts(res.data))
+    fetch('https://inventory-management-system-in.herokuapp.com/product/list').then(response => response.json().then(data => ({ data: data, status: response.status }))).then(res => setProducts(res.data))
 
     document.querySelector(".edit").close()
 
   }
 
   function addCategory() {
-    fetch(" http://localhost:8080/category/add", {
+    fetch("https://inventory-management-system-in.herokuapp.com/category/add", {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
